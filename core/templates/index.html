@@ -5,10 +5,19 @@
     <title>Title</title>
 </head>
 <body>
-
+<h1>Pedidos</h1>
 <ul>
-    {% for cli in clientes %}
-        <li>{{ cli.pedido }}</li>
+    {% for p in pedidos %}
+        <li><p><b>Cliente</b>  {{ p.cliente.nome }}
+           <b>Pedido </b> {{ p.id }}</p>
+            Produtos:
+            <ol>
+                {% for prod in p.produtos.all %}
+                    <li> {{ prod.titulo }}</li>
+                {% endfor %}
+            </ol>
+        </li>
+
 
     {% endfor %}
 </ul>

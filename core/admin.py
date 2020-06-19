@@ -10,4 +10,4 @@ admin.site.register(Produto)
 admin.site.register(Pedido)
 admin.site.register(Cliente)
 
-admin.site.site_header = "Store"
+admin.site.site_header = "Ifude"
